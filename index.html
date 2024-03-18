@@ -3,42 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculadora Simples</title>
+  <title>10 Gadgets Incríveis para Facilitar Sua Vida</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" integrity="sha384-0evYQm+GUOYrV0P4oi707qin1WqO+5rrMOHqiSY7tEz//I9sU4H6x7n4lZc4Xo/j5" crossorigin="anonymous">
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+    
+    .container {
+      max-width: 960px;
+    }
+    
+    .card {
+      margin-bottom: 20px;
+    }
+    
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+  </style>
 </head>
 <body>
-  <div id="calculadora" style="width: 300px; border: 1px solid #ccc; border-radius: 5px; overflow: hidden;">
-    <div id="visor" style="background-color: #f6f6f6; height: 50px; padding: 10px; text-align: right;">
-      <span id="visor-texto">0</span>
-    </div>
-    <div id="teclado" style="display: grid; grid-template-columns: repeat(4, 1fr); grid-gap: 5px; padding: 10px;">
-      <button class="numero" onclick="adicionarNumero(1)">1</button>
-      <button class="numero" onclick="adicionarNumero(2)">2</button>
-      <button class="numero" onclick="adicionarNumero(3)">3</button>
-      <button class="operador" onclick="adicionarOperador('+')">+</button>
-      <button class="numero" onclick="adicionarNumero(4)">4</button>
-      <button class="numero" onclick="adicionarNumero(5)">5</button>
-      <button class="numero" onclick="adicionarNumero(6)">6</button>
-      <button class="operador" onclick="adicionarOperador('-')">-</button>
-      <button class="numero" onclick="adicionarNumero(7)">7</button>
-      <button class="numero" onclick="adicionarNumero(8)">8</button>
-      <button class="numero" onclick="adicionarNumero(9)">9</button>
-      <button class="operador" onclick="adicionarOperador('*')">*</button>
-      <button class="numero" onclick="adicionarNumero(0)">0</button>
-      <button class="operador" onclick="adicionarOperador('/')">/</button>
-      <button class="igual" onclick="calcularResultado()">=</button>
-      <button class="limpar" onclick="limparVisor()">C</button>
-    </div>
-  </div>
-  <div>
-    <!-- Inicio codigo Contador -->
-    <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contador de Visitas</title>
-</head>
-<body>
+  <div class="container">
+    <h1>10 Gadgets Incríveis que Vão Facilitar Sua Vida (e Você Precisa Ter!)</h1>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="imagens/gadget1.jpg" class="card-img-top" alt="Imagem do Gadget 1">
+          <div class="card-body">
+            <h5 class="card-title">Gadget 1</h5>
+            <p class="card-text">Descrição do Gadget 1 e seus benefícios.</p>
+            <a href="link-para-comprar-gadget1" class="btn btn-primary">Comprar</a>
+          </div>
+              <!-- Inicio codigo Contador -->
+   
   <h1>Contador de Visitas</h1>
   <p>Você é o visitante número <span id="numero-visitas"></span></p>
   <script>
@@ -62,60 +62,11 @@
     // Exibir o número de visitas na página
     numeroVisitasElement.textContent = numeroVisitas;
   </script>
-</body>
-</html>
-
     <!-- Fim do codigo Contador -->
+        </div>
+      </div>
+      </div>
   </div>
-  <script>
-    var visorTexto = document.getElementById("visor-texto");
-    var ultimoValor = 0;
-    var operacaoPendente = null;
-
-    function adicionarNumero(numero) {
-      if (visorTexto.textContent === "0") {
-        visorTexto.textContent = numero;
-      } else {
-        visorTexto.textContent += numero;
-      }
-    }
-
-    function adicionarOperador(operador) {
-      if (operacaoPendente != null) {
-        calcularResultado();
-      }
-      ultimoValor = parseFloat(visorTexto.textContent);
-      operacaoPendente = operador;
-      visorTexto.textContent = "";
-    }
-
-    function calcularResultado() {
-      var valorAtual = parseFloat(visorTexto.textContent);
-      var resultado = 0;
-      switch (operacaoPendente) {
-        case "+":
-          resultado = ultimoValor + valorAtual;
-          break;
-        case "-":
-          resultado = ultimoValor - valorAtual;
-          break;
-        case "*":
-          resultado = ultimoValor * valorAtual;
-          break;
-        case "/":
-          resultado = ultimoValor / valorAtual;
-          break;
-      }
-      visorTexto.textContent = resultado;
-      operacaoPendente = null;
-      ultimoValor = 0;
-    }
-
-    function limparVisor() {
-      visorTexto.textContent = "0";
-      ultimoValor = 0;
-      operacaoPendente = null;
-    }
-  </script>
 </body>
 </html>
+

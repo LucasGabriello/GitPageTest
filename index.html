@@ -31,8 +31,41 @@
   </div>
   <div>
     <!-- Inicio codigo Contador -->
-<div align="center"><a title="busca cep" href="https://buscacep.net/"><img src="https://contador-gratis.com/contadores-de-visitas/180324031735496.gif" alt="busca cep"></a><div><a href="https://www.contador-gratis.com/" title="contador de visitas">Contador de Visitas</a></div></div>
-<!-- Fim do codigo Contador -->
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contador de Visitas</title>
+</head>
+<body>
+  <h1>Contador de Visitas</h1>
+  <p>Você é o visitante número <span id="numero-visitas"></span></p>
+  <script>
+    // Obter elemento que mostrará o número de visitas
+    var numeroVisitasElement = document.getElementById("numero-visitas");
+
+    // Carregar o número de visitas do localStorage
+    var numeroVisitas = localStorage.getItem("numeroVisitas");
+
+    // Se não existir um número de visitas no localStorage, inicializar com 0
+    if (numeroVisitas === null) {
+      numeroVisitas = 0;
+    }
+
+    // Incrementar o número de visitas
+    numeroVisitas++;
+
+    // Atualizar o número de visitas no localStorage
+    localStorage.setItem("numeroVisitas", numeroVisitas);
+
+    // Exibir o número de visitas na página
+    numeroVisitasElement.textContent = numeroVisitas;
+  </script>
+</body>
+</html>
+
+    <!-- Fim do codigo Contador -->
   </div>
   <script>
     var visorTexto = document.getElementById("visor-texto");

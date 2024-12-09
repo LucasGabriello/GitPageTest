@@ -1,2 +1,2 @@
 >Link do projeto no Git page
-  >http://www.techgitpage.wuaze.com/
+  > https://lucasgabriello.github.io/GitPageTest/
